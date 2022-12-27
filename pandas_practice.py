@@ -29,12 +29,14 @@ print(data2)
 
 
 
+#key是columns名稱，values是內容
 movie_dict = {
     "title": ["The Dark Knight", "Schindler's List", "Forrest Gump", "Inception"],
     "rating": [9.0, 8.9, 8.8, 8.7]
 }
 df = pd.DataFrame(movie_dict)
 print(df)
+
 
 #index
 
