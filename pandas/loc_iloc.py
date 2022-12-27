@@ -11,3 +11,8 @@ df.loc[["The Dark Knight", "Inception"], ["rating", "release_year"]] #只找前�
 
 
 print(df[df['release_year'] > 2000]) #也適用華麗索引跟廣播 可用來當遮罩
+
+dd = df[df['movie_titles'] == 'The Dark Knight']
+print(dd)
+
+print(df.iloc[0:2,0:3])
