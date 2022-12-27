@@ -30,3 +30,22 @@ print(player_profile["pos"].value_counts())
 print("Pos after mapping:")
 player_profile["pos_recoded"] = player_profile["pos"].map(pos_dict)
 print(player_profile["pos_recoded"].value_counts())
+
+
+'''
+函數映射
+透過 .apply() 方法來實踐，傳入函數或 lambda 表示式作為映射的準則，例如將本來分類較細膩的鋒衛對應為較粗略的 G、F 與 C
+
+'''
+
+def recode_pos(x):
+    if x[0] == 'G':
+        return 'G'
+    elif x[0] == 'F':
+        return 'F'
+    elif x[0] == 'C':
+        return 'C'
+
+player_profile["pos_recoded"] = player_profile["pos"].apply(recode_pos)
+print("Pos before applying:")
+player_profile["pos"].value_counts()
